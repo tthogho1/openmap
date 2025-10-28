@@ -1,0 +1,174 @@
+.map-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.map-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.connection-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.connection-controls input {
+  padding: 0.5rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.connection-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.connection-controls button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.connection-controls button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.connected {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.status.disconnected {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.location-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.coordinates {
+  color: #ecf0f1;
+  font-weight: 500;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.location-info button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.location-info button:hover:not(:disabled) {
+  background-color: #d35400;
+}
+
+.location-info button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.users-info {
+  border-top: 1px solid #34495e;
+  padding-top: 0.5rem;
+}
+
+.users-info p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ecf0f1;
+}
+
+.users-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.user-badge {
+  padding: 0.25rem 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.user-badge.current-user {
+  background-color: #e74c3c;
+}
+
+.map {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .map-header {
+    padding: 0.75rem;
+  }
+
+  .map-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .connection-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .connection-controls input {
+    min-width: auto;
+  }
+
+  .location-info {
+    font-size: 0.8rem;
+  }
+}
